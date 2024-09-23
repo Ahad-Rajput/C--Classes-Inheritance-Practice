@@ -9,7 +9,7 @@ class BankAccoun {
 public:
     int accountNum;
     string accountHodler;
-    
+    // This is just for testing purpose.
 };
 
 int main()
