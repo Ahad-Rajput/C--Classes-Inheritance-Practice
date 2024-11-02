@@ -17,7 +17,9 @@ int A::x = 0;
 
 int main()
 {
-    A a;
+    A a, b, c;
     a.show();
+    b.show();
+    c.show();
     return 0;
 }
