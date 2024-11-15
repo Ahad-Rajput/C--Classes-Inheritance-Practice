@@ -1,12 +1,12 @@
-// - :
+// * :
 #include <iostream>
 using namespace std;
 
-class Subtract{
+class Mult{
 private:
     int a;
 public: 
-    Subtract(){
+    Mult(){
         a = 0;
     }
     void in(){
@@ -16,9 +16,9 @@ public:
     void show(){
         cout << "a = " << a << endl;
     }
-    Subtract operator - (Subtract p){
-        Subtract temp;
-        temp.a = this->a - p.a ;
+    Mult operator * (Mult p){
+        Mult temp;
+        temp.a = this->a * p.a ;
         return temp;
     }
 
@@ -26,10 +26,10 @@ public:
 
 int main()
 {
-    Subtract x, y, z;
+    Mult x, y, z;
     x.in();
     y.in();
-    z = x - y;
+    z = x * y;
     // x.show();
     // y.show();
     cout << "------\n";
