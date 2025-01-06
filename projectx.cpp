@@ -42,11 +42,11 @@ public:
         accountHolders[totalAccounts] = name;
         accountNumbers[totalAccounts] = nextAccountNum++;
         balances[totalAccounts] = initialBalance;
-        totalAccounts++;
 
         // Display account number to user
         cout << "Account created successfully!\n";
-        cout << "Your Account Number is: " << accountNumbers[totalAccounts - 1] << endl;
+        cout << "Your Account Number is: " << accountNumbers[totalAccounts] << endl;
+        totalAccounts++;
     }
 
     void checkBalance() {
@@ -192,13 +192,26 @@ int main() {
         cin >> choice;
 
         switch (choice) {
-            case 1: bank.createAccount(); break;
-            case 2: bank.checkBalance(); break;
-            case 3: bank.deposit(); break;
-            case 4: bank.withdraw(); break;
-            case 5: bank.deleteAccount(); break;
-            case 6: cout << "Thank you for using ABC Bank.\n"; break;
-            default: cout << "Invalid choice. Try again.\n";
+            case 1:
+                bank.createAccount();
+                break;
+            case 2:
+                bank.checkBalance();
+                break;
+            case 3:
+                bank.deposit();
+                break;
+            case 4:
+                bank.withdraw();
+                break;
+            case 5:
+                bank.deleteAccount();
+                break;
+            case 6:
+                cout << "Thank you for using ABC Bank.\n";
+                break;
+            default:
+                cout << "Invalid choice. Try again.\n";
         }
     } while (choice != 6);
 
